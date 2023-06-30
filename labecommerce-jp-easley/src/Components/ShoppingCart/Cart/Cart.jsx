@@ -1,12 +1,13 @@
 import React from 'react'
-import Items from '../Items/Items'
+import Items from './Items'
+import { CartContainer } from '../../../style'
 
 const Cart = () => {
   return (
-    <>
-    <p>Cart</p>
+    <CartContainer>
+    <h2>Cart</h2>
     <Items />
-    </>
+    </CartContainer>
   )
 }
 
