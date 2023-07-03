@@ -16,19 +16,20 @@ const FIlters = () => {
     <FilterContainer>
       <h2>Filters</h2>
       <DivInputs>
-        <label for="valorMax">Valor máximo:</label>
+        <label for="valorMin">Valor minimo:</label>
+        <input
+          // min={209.90}
+          id="valorMin"
+          type="number"
+          value={valorMin}
+          onChange={(e) => setValorMin(e.currentTarget.value)}
+        />
+                <label for="valorMax">Valor máximo:</label>
         <input
           id="valorMax"
           type="number"
           value={valorMax}
           onChange={(e) => setValorMax(e.currentTarget.value)}
-        />
-        <label for="valorMin">Valor minimo:</label>
-        <input
-          id="valorMin"
-          type="number"
-          value={valorMin}
-          onChange={(e) => setValorMin(e.currentTarget.value)}
         />
       </DivInputs>
 
