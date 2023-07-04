@@ -1,6 +1,4 @@
 # Labecommerce João Pedro turma easley 
-
-
 # Sobre o projeto
 
 https://oceanic-believe.surge.sh/
