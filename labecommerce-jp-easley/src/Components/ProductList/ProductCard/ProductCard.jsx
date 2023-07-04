@@ -8,6 +8,7 @@ import {
   H5,
   ImgDiv,
   ProductCardDiv,
+  Select,
   SpanStyled,
 } from "../../../style";
 
@@ -19,16 +20,37 @@ const ProductCard = () => {
     filterMaxPrice,
     setOrder,
     order,
+    cart,
+    setCart,
+    total,
+    setTotal,
   } = useContext(ProductContext);
 
+  const addToCart = (products, index) => {
+    const produtoExistente = cart.find((item) => item.id === products.id);
+
+    if (produtoExistente) {
+      const novoCarrinho = cart.map((item) => {
+        if (item.id === produtoExistente.id) {
+          return {
+            ...item,
+            quantidade: item.quantidade + 1,
+          };
+        }
+        return item;
+      });
+
+      setCart(novoCarrinho);
+    } else {
+      setCart([...cart, { ...products, quantidade: 1 }]);
+    }
+
+    setTotal(total + products.price);
+  };
   return (
     <ProductCardDiv>
       <DivFilterCresc>
-        <select
-          // className=" border bg-slate-800 text-blue-100 mr-4 rounded"
-          onChange={(e) => setOrder(e.currentTarget.value)}
-          value={order}
-        >
+        <Select onChange={(e) => setOrder(e.currentTarget.value)} value={order}>
           Categoria
           <option disabled value="">
             Exibir por ordem
@@ -36,7 +58,7 @@ const ProductCard = () => {
           <option value="populares">Populares</option>
           <option value="crescente">Crescente</option>
           <option value="decrescente">Decrescente</option>
-        </select>
+        </Select>
       </DivFilterCresc>
       {products
         .filter(searchFilterName)
@@ -44,14 +66,13 @@ const ProductCard = () => {
         .filter(filterMaxPrice)
         .sort((a, b) => {
           if (order === "crescente") {
-           return a.price - b.price;
-          }else if(order === "decrescente"){
+            return a.price - b.price;
+          } else if (order === "decrescente") {
             return b.price - a.price;
-          }else if(order === "populares"){
-            return products
+          } else if (order === "populares") {
+            return products;
           }
         })
-
         .map((item) => (
           <Card key={item.id}>
             <ImgDiv>
@@ -74,7 +95,7 @@ const ProductCard = () => {
                     })}
                   </SpanStyled>
                 </p>
-                <button>Add to cart</button>
+                <button onClick={() => addToCart(item)}>Adicionar ao carrinho</button>
               </DivTwo>
             </DivOne>
           </Card>
