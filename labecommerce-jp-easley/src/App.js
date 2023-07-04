@@ -14,7 +14,8 @@ function App() {
         <Home />
         <Cart />
       </AppContainer>
-      <Footer />
+        <Footer />
+
     </>
   );
 }
