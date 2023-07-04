@@ -8,10 +8,11 @@ const ProductProvider = ({ children }) => {
   const [valorMax, setValorMax] = useState("");
   const [buscaName, setBuscaName] = useState("");
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
   const [order, setOrder] = useState("");
+  const [total, setTotal] = useState(0);
 
   //Funções
-
   const searchFilterName = (product) => {
     return product.name.toLowerCase().includes(buscaName.toLowerCase());
   };
@@ -48,6 +49,26 @@ const ProductProvider = ({ children }) => {
     setProducts(dbProducts);
   }, []);
 
+  useEffect(() => {
+    const carrinhoSalvo = localStorage.getItem("cart");
+    const totalSalvo = localStorage.getItem("total");
+    if (carrinhoSalvo) {
+      setCart(JSON.parse(carrinhoSalvo));
+    }
+
+    if (totalSalvo) {
+      setTotal(parseFloat(totalSalvo));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  useEffect(() => {
+    localStorage.setItem("total", total.toString());
+  }, [total]);
+
   return (
     <ProductContext.Provider
       value={{
@@ -62,7 +83,11 @@ const ProductProvider = ({ children }) => {
         filterMaxPrice,
         searchFilterName,
         order,
-        setOrder
+        setOrder,
+        cart,
+        setCart,
+        total,
+        setTotal,
       }}
     >
       {children}

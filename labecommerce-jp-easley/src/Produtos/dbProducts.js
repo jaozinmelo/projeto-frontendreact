@@ -7,16 +7,22 @@ import pedra6 from '../utils/pedra6.jpg'
 import pedra7 from '../utils/pedra7.jpg'
 import pedra8 from '../utils/pedra8.jpg'
 import pedra9 from '../utils/pedra9.jpg'
+import spacialclothes2 from '../utils/spacialclothes2.jpeg'
+import spacialclothes3 from '../utils/spacialclothes3.jpeg'
+import spacialclothes4 from '../utils/spacialclothes4.jpeg'
+import spacialclothes5 from '../utils/spacialclothes5.jpeg'
+import spacialclothes6 from '../utils/spacialclothes6.jpeg'
+import spacialclothes7 from '../utils/spacialclothes7.jpeg'
+import spacialclothes8 from '../utils/spacialclothes8.jpeg'
+import spacialclothes9 from '../utils/spacialclothes9.jpeg'
+import spacialclothes10 from '../utils/spacialclothes10.jpeg'
+import spacialclothes11 from '../utils/spacialclothes11.jpeg'
 
-// export const categoryDb = [
-//     {id:'pedra', label:'pedra'},
-//     {id:'meteorito', label:'meteorito'}
-// ]
 
 const dbProducts
  = [
     {
-     name:"pedra de crack",
+     name:"pedra de venus",
      id: 1,
      rate: 5,
      category:"pedra",
@@ -104,7 +110,108 @@ const dbProducts
     stoke: 2,
     description: "Uma pedra caída do espaço é muito mais do que apenas um objeto terrestre comum. Ela carrega consigo uma história cósmica única, contendo informações preciosas sobre a formação e a evolução do nosso sistema solar. Cada meteorito é um registro antigo, preservando pistas sobre a idade do universo, processos geológicos e até mesmo possíveis formas de vida extraterrestre.",
     image:pedra9
-    }
+    },
+    {
+    name:"Roupa Espacial Classe 1",
+    id: 10,
+    rate: 5,
+    category:"roupa espacial",
+    price: 3862.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes2
+    },
+    {
+    name:"Roupa Espacial Classe 2",
+    id: 11,
+    rate: 5,
+    category:"roupa espacial",
+    price: 4533.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes3
+    },
+    {
+    name:"Roupa Espacial Classe 3",
+    id: 12,
+    rate: 5,
+    category:"roupa espacial",
+    price: 5343.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes4
+    },
+    {
+    name:"Roupa Espacial Classe 4",
+    id: 13,
+    rate: 5,
+    category:"roupa espacial",
+    price: 4234.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes5
+    },
+    {
+    name:"Roupa Espacial Classe 5",
+    id: 14,
+    rate: 5,
+    category:"roupa espacial",
+    price: 5362.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes6
+    },
+    {
+    name:"Roupa Espacial Classe 6",
+    id: 15,
+    rate: 5,
+    category:"roupa espacial",
+    price: 4862.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes7
+    },
+    {
+    name:"Roupa Espacial Classe 7",
+    id: 16,
+    rate: 5,
+    category:"roupa espacial",
+    price: 5662.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes8
+    },
+    {
+    name:"Roupa Espacial Classe 8",
+    id: 17,
+    rate: 5,
+    category:"roupa espacial",
+    price: 6662.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes9
+    },
+    {
+    name:"Roupa Espacial Classe 9",
+    id: 18,
+    rate: 5,
+    category:"roupa espacial",
+    price: 8862.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes10
+    },
+    {
+    name:"Roupa Espacial Classe 10",
+    id: 19,
+    rate: 5,
+    category:"roupa espacial",
+    price: 6562.99,
+    stoke: 2,
+    description: " ",
+    image:spacialclothes11
+    },
+    
 ]
 
 export default dbProducts

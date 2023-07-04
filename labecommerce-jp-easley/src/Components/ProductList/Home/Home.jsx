@@ -5,7 +5,7 @@ import { HomeContainer } from '../../../style'
 const Home = () => {
   return (
     <HomeContainer>
-    <p>Home</p>
+    <h1>PRODUTOS ACHADOS NO LIXO DA NASA</h1>
     <ProductCard />
     </HomeContainer>
   )
