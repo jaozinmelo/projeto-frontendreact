@@ -51,6 +51,7 @@ export const CartContainer = styled.div`
 export const ProductCardDiv = styled.div`
   background: linear-gradient(to bottom, #41556c, #2f2f57, #2f3041, #161945  );
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 `;
 export const Card = styled.div`
@@ -83,7 +84,7 @@ export const Card = styled.div`
 export const ImgDiv = styled.div`
   display: flex;
   justify-content: center;
-  border: 0.01rem solid;
+  border: 0.01rem solid black;
   img {
     display: flex;
     height: 10.5rem;
