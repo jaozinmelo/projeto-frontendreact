@@ -1,9 +1,9 @@
 # Labecommerce João Pedro turma easley 
 
-
 # Sobre o projeto
 
 https://oceanic-believe.surge.sh
+
 
 Labecommerce é o projeto de introdução aos fundamentos do React. Aqui temos a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce, meu foco, foi em entender e aprender realmente a funcionalidade dos hooks e tudo o que tenho aprendido a respeito do react até agora, deixando de lado apenas o "toque" da estilização, espero que goste.
 
@@ -15,8 +15,8 @@ O projeto consistirá em 3 grandes partes:
     - Mostrando todos os produtos
     - Deve haver alguma forma de ordenar os produtos por ordem crescente ou decrescente de preço (pode ser na home em si ou junto dos filtros)
     - Produtos:
-        - Devem ter um botão que permita adicioná-los ao carrinho
-        - Devem exibir o nome, preço e imagem em um card
+    - Devem ter um botão que permita adicioná-los ao carrinho
+    - Devem exibir o nome, preço e imagem em um card
 2. Carrinho
     - Mostrar todos os produtos e quantidades adicionadas
     - Capacidade de remover itens do carrinho
